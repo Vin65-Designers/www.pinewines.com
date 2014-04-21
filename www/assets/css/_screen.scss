@@ -1,0 +1,2089 @@
+/* CSS Document */
+/* ====================================================================================================
+	Table of Content
+	
+	Theme Settings
+	
+	1. Typography
+	2. User Tools
+	3. Header
+	4. Navigation
+		a. Navigation
+		b. Link to Footer Navigation
+		c. Sub Navigation
+	5. Content
+		a. Homepage Styles
+		b. Page Styles
+	6. Blog Template
+	7. Print Template
+	8. Buttons
+	9. Footer
+	10. Vin65 Overrides
+		a. User Tools
+		b. Homepage Product Group
+		c. Product List Layouts
+		d. Pagination Styles
+	11. IE8 Fixes000
+*/
+
+//   ===================================================================================================
+//   Theme Settings
+// =====================================================================================================
+
+//   ===================================================================================================
+//	 Global Variables
+//   ===================================================================================================
+$backtoTopColor: #fff;
+$backtoTopBackground: #1a1a1a;
+$backtoTopBorder: #ccc; 
+
+@mixin font($weight) {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: $weight;
+}
+
+$userToolsBackground: image-url('user-tools-background.png'); //Background for usertools
+
+//   ===================================================================================================
+//	 Default Theme
+//   ===================================================================================================
+$primaryColor: #56C1DA;
+$secondaryColor: #A9C535;
+
+$backgroundColor: #fff; // Website Background Color
+$linkColor: $primaryColor;
+
+$fontColor: #000; // General Font Color
+
+// Default Heading Font Family 
+$headingColor: #676767; // Default Heading Font Color
+$headingAltColor: #676767; // Default Heading Font Color
+
+$userToolsColor: #fff; //Font Color for usertools
+$userToolsLinkColor: #ccc; //Font Color for usertools
+$userToolsHoverColor: #fff; //Font Color for usertools
+
+$featurebackgroundColor: #fff; // Feature Image Background Color
+
+$featuredProductDot: url('../images/featured-title-dot.jpg');
+
+$searchBorderColor: #999; //Border of Search Bar
+$searchButtonIcon: url("../images/search-icon.jpg");
+
+$navColor: #676767; //Font Color for main navigation
+$navColorHover: #fff; //Font Color for main navigation
+$navBackgroundColor: #fff; //Color for nav background
+$navBackgroundColorHover: #56C1DA; //Color for link color
+$navDropdownColor: #676767;
+
+$subNavColor: #a3a3a3; //Font Color for sub navigation
+$subNavColorHover: #fff; //Font Color for sub navigation
+$subNavColorHoverBackground: #878787;
+$submenuBar: $secondaryColor;
+
+$buttonColor: $primaryColor; // Default Color for Buttons
+$buttonFontColor: #fff; // Default Color for Button Font
+
+$altButtonColor: #8D8D8D; // Alt Color for Buttons
+$altButtonFontColor: #fff; // Alt Color for Buttons Font
+
+$footerBackground: #1A1A1A; //Footer Background Color
+$footerColor: #fff; //Footer Color
+$footerLink: $primaryColor; // Footer Link
+$footerLinkHover: #fff; // Footer Link Hover
+$footerCopyrightColor: #999; //Bottom footer with copyright and accolade
+
+//   ===================================================================================================
+//	 Yellow & Teal Theme
+//   ===================================================================================================
+// $primaryColor: #deb424;
+// $secondaryColor: #248a7f;
+
+// $backgroundColor: #fff; // Website Background Color
+// $linkColor: $primaryColor;
+
+// $fontColor: #000; // General Font Color
+
+// // Default Heading Font Family 
+// $headingColor: #000; // Default Heading Font Color
+// $headingAltColor: #000; // Default Heading Font Color
+
+// $userToolsColor: #fff; //Font Color for usertools
+// $userToolsLinkColor: #ccc; //Font Color for usertools
+// $userToolsHoverColor: #fff; //Font Color for usertools
+
+// $featurebackgroundColor: #fff; // Feature Image Background Color
+
+// $featuredProductDot: url('../images/featured-title-dot.jpg');
+
+// $searchBorderColor: #999; //Border of Search Bar
+// $searchButtonIcon: url("../images/search-icon.jpg");
+
+// $navColor: #676767; //Font Color for main navigation
+// $navColorHover: #fff; //Font Color for main navigation
+// $navBackgroundColor: #fff; //Color for nav background
+// $navBackgroundColorHover: #56C1DA; //Color for link color
+// $navDropdownColor: #676767;
+
+// $subNavColor: #a3a3a3; //Font Color for sub navigation
+// $subNavColorHover: #fff; //Font Color for sub navigation
+// $subNavColorHoverBackground: #878787;
+// $submenuBar: $secondaryColor;
+
+// $buttonColor: $primaryColor; // Default Color for Buttons
+// $buttonFontColor: #fff; // Default Color for Button Font
+
+// $altButtonColor: #8D8D8D; // Alt Color for Buttons
+// $altButtonFontColor: #fff; // Alt Color for Buttons Font
+
+// $footerBackground: #1A1A1A; //Footer Background Color
+// $footerColor: #fff; //Footer Color
+// $footerLink: $primaryColor; // Footer Link
+// $footerLinkHover: #fff; // Footer Link Hover
+// $footerCopyrightColor: #999; //Bottom footer with copyright and accolade
+
+//   ===================================================================================================
+//	 Dark Theme
+//   ===================================================================================================
+// $primaryColor: #56C1DA;
+// $secondaryColor: #A9C535;
+
+// $backgroundColor: #373737; // Website Background Color
+// $linkColor: $primaryColor;
+
+// $fontColor: #fff; // General Font Color
+
+// // Default Heading Font Family 
+// $headingColor: #f7f7f7; // Default Heading Font Color
+// $headingAltColor: #000; // Default Heading Font Color
+
+// $userToolsColor: #fff; //Font Color for usertools
+// $userToolsLinkColor: #ccc; //Font Color for usertools
+// $userToolsHoverColor: #fff; //Font Color for usertools
+
+// $featurebackgroundColor: #fff; // Feature Image Background Color
+
+// $featuredProductDot: url('../images/featured-title-dot-white.png');
+
+// $searchBorderColor: #999; //Border of Search Bar
+// $searchButtonIcon: url("../images/search-icon-white.png");
+
+// $navColor: #f7f7f7; //Font Color for main navigation
+// $navColorHover: #fff; //Font Color for main navigation
+// $navBackgroundColor: #fff; //Color for nav background
+// $navBackgroundColorHover: #56C1DA; //Color for link color
+// $navDropdownColor: #676767;
+
+// $subNavColor: #f7f7f7; //Font Color for sub navigation
+// $subNavColorHover: #fff; //Font Color for sub navigation
+// $subNavColorHoverBackground: #878787;
+// $submenuBar: $secondaryColor;
+
+// $buttonColor: $primaryColor; // Default Color for Buttons
+// $buttonFontColor: #fff; // Default Color for Button Font
+
+// $altButtonColor: #8D8D8D; // Alt Color for Buttons
+// $altButtonFontColor: #fff; // Alt Color for Buttons Font
+
+// $footerBackground: #1A1A1A; //Footer Background Color
+// $footerColor: #fff; //Footer Color
+// $footerLink: $primaryColor; // Footer Link
+// $footerLinkHover: #fff; // Footer Link Hover
+// $footerCopyrightColor: #999; //Bottom footer with copyright and accolade
+
+//   ===================================================================================================
+//	 Blue Theme
+//   ===================================================================================================
+
+// $primaryColor: #333e52;
+// $secondaryColor: #158d72;
+
+// $backgroundColor: #1795ac; // Website Background Color
+// $linkColor: #f1c40f;
+
+// $fontColor: #fff; // General Font Color
+
+// // Default Heading Font Family 
+// $headingColor: #f7f7f7; // Default Heading Font Color
+// $headingAltColor: #000; // Default Heading Font Color
+
+// $userToolsColor: #fff; //Font Color for usertools
+// $userToolsLinkColor: #ccc; //Font Color for usertools
+// $userToolsHoverColor: #fff; //Font Color for usertools
+
+// $featurebackgroundColor: #fff; // Feature Image Background Color
+
+// $featuredProductDot: url('../images/featured-title-dot-white.png');
+
+// $searchBorderColor: #fff; //Border of Search Bar
+// $searchButtonIcon: url("../images/search-icon-white.png");
+
+// $navColor: #f7f7f7; //Font Color for main navigation
+// $navColorHover: #fff; //Font Color for main navigation
+// $navBackgroundColor: #fff; //Color for nav background
+// $navBackgroundColorHover: $primaryColor; //Color for link color// $navDropdownColor: #999;
+// $navDropdownColor: #676767;
+
+// $subNavColor: #f7f7f7; //Font Color for sub navigation
+// $subNavColorHover: #000; //Font Color for sub navigation
+// $subNavColorHoverBackground: #fff;
+// $submenuBar: #f1c40f;
+
+// $buttonColor: $primaryColor; // Default Color for Buttons
+// $buttonFontColor: #fff; // Default Color for Button Font
+
+// $altButtonColor: #4E4E4E; // Alt Color for Buttons
+// $altButtonFontColor: #fff; // Alt Color for Buttons Font
+
+// $footerBackground: #1A1A1A; //Footer Background Color
+// $footerColor: #fff; //Footer Color
+// $footerLink: $primaryColor; // Footer Link
+// $footerLinkHover: #fff; // Footer Link Hover
+// $footerCopyrightColor: #fff; //Bottom footer with copyright and accolade
+
+/*   ===================================================================================================
+     1. Typography - These get copied into the admin.css
+======================================================================================================== */
+html {
+    font-size: 75%;
+}
+
+body{
+	background-color: $backgroundColor;
+	color: $fontColor;
+	@include font(400);
+}
+
+#{headings(1,6)}{
+   	color: $headingColor;
+	@include font(400);
+    margin: 0;
+
+    a {
+    	color: $headingColor;
+    }
+}
+
+h1 {
+    font-size: 3em;  // 3 * 12 = 36px
+    line-height: 1; // 1 * 36 = 36px
+    margin-bottom: 0.5em; // 0.5 * 36 = 18px
+}
+
+h2 {
+    font-size: 2.25em; // 2.25 * 12 = 27px
+    line-height: 1.3333333333333333; // 1.33 * 27px = 36px
+    margin-bottom: 0.6666666666666666em; // 0.66 * 27px = 18px
+}
+
+h3 {
+    font-size: 1.5em; // 1.5 * 12 = 18px
+    line-height: 1; // 1 * 18 = 18px
+    margin-bottom: 1em; // 1 * 18 = 18px
+}
+
+h4 {
+    font-size: 1.3125em; // 1.3125 * 12 = 15.75px
+    line-height: 1.1428571428571428; // 1.14 * 15.75 = 18px
+    margin-bottom: 1.1428571428571428em; // 1.14 * 15.75 = 18px
+}
+
+h5 {
+    font-size: 1.125em; // 1.125 * 12 = 13.5px
+    line-height: 1.3333333333333333; // 1.3333 * 13.5 = 18px
+    margin-bottom: 1.3333333333333333em; // 1.3333 * 13.5 = 18px
+}
+
+h6 {
+    font-size: 1em; // 1 * 12 = 12px
+    line-height: 1.5; // 1.5 * 12 = 18px
+    margin-bottom: 1.5em; // 1.5 * 12 = 18px
+}
+
+.v65-title { 
+    font-size: 2em; // 2 * 12 = 24px
+    line-height: 1; // 1 * 24 = 24px
+    margin-bottom: 0.5em; // 0.5 * 24 = 12px
+   	color: $headingColor;
+	@include font(400);
+
+	a {
+		color: $headingColor;
+		@include font(400);
+	}
+}
+
+.v65-subtitle { //36px
+    font-size: 1.5em; //18px
+    line-height: 1; //18px
+    margin-bottom: 1em; //18px
+   	color: $headingColor;
+	@include font(400);
+}
+
+p, blockquote {
+    margin: 0 0 1.5em;
+    line-height: 1.5;
+}
+
+dl, ol, ul {
+    margin: 0 0 1.5em;
+}
+
+dd, dt, li {
+    line-height: 1.5;
+    margin: 0;
+}
+
+a{
+	color: $linkColor;
+	text-decoration: none;
+	&:hover, &:focus, &:active{
+		text-decoration: underline;
+	}
+}
+
+img{
+	border:none;
+	height: auto !important;
+	max-width: 100%;
+}
+
+form {
+	margin-bottom: 1em;
+}
+
+legend {
+	color: $fontColor;
+}
+
+hr {
+	background-color: $fontColor;
+	border: 0;
+	color: $fontColor;
+	height: 1px;
+}
+
+.wrapper {
+	max-width: 970px;
+	margin: 0 auto;
+	width: 100%;
+
+	@media screen and (max-width : 970px) {
+		padding: 0 2%;
+		width: 96%;
+	}
+}
+
+.backtotop {
+	display: none;
+
+	@media screen and (max-width : 680px) {
+		position: fixed;
+		bottom: 1em;
+		right: 1em;
+		z-index: 900;
+
+		a {
+			color: $backtoTopColor;
+			background: $backtoTopBackground;
+			border: 1px solid $backtoTopBorder;
+			border-radius: 50%;
+			display: block;
+			line-height: 5em;
+			height: 5em;
+			width: 5em;
+			text-align: center;
+			text-decoration: none;
+		}
+	}
+	
+}
+
+/*   ===================================================================================================
+     2. User Tools
+======================================================================================================== */
+
+.userToolsWrapper {
+	background: #505050 $userToolsBackground;
+	border-bottom: 2px solid #7F8080;
+	height: 3em;
+	position: relative;
+	width: 100%;
+	z-index: 999;
+
+	@media screen and (max-width : 580px) {
+		height: 4em; 
+		line-height: 4em;
+	}
+
+}
+
+
+
+/*   ===================================================================================================
+     3. Header
+======================================================================================================== */
+
+header {
+	background: $backgroundColor;
+	min-height: 115px;
+	padding: 0 0 2em 0;
+	position: relative;
+	width: 100%;
+	z-index: 100;
+
+	@media screen and (max-width: 768px) {
+		text-align: center;
+	}
+
+	.wrapper {
+		border-bottom: 1px solid $fontColor;
+		padding: 2em 0 1em;
+		position: relative;
+
+		@media screen and (max-width: 580px) {
+			& > form {
+				display: none;
+			}
+		}
+	}
+
+	.logo { 
+		float: left;
+		position: relative;
+
+		@media screen and (max-width: 768px) {
+			float: none;
+		}
+
+		img {
+
+			@media screen and (max-width : 580px) {
+				padding-top: 10px;
+				max-height: 90%; 
+			}
+
+		}
+
+	}
+
+	form {
+		float: right;
+		margin: 0 0 2.5em;
+		width: 245px;
+
+		@media screen and (max-width: 768px) {
+			float: none;
+			margin: 2em auto;
+		}
+
+		fieldset {
+			border: none;
+			margin: 0;
+			padding: 0;
+			position: relative;
+
+			#v65-searchWidgetInput {
+				float: left;
+				width: 100%;
+
+				input {
+					background: $backgroundColor;
+					border: 0;
+					border-top: 1px solid $searchBorderColor;
+					border-bottom: 1px solid $searchBorderColor;
+					border-radius: 0;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
+					color: $fontColor;
+					height: 2em;
+					line-height: 2em;
+					outline: none;
+					-webkit-appearance: none;
+					width: 100%;
+				}
+			}
+
+			#v65-searchWidgetButton {
+				
+				button {
+					background: $searchButtonIcon no-repeat scroll 0 3px transparent;
+					border-radius: 0;
+					font-size: 0;
+					height: 23px;
+					position: absolute;
+					right: 0;
+					top: -2px;
+					width: 23px;
+
+					span {
+						background: none;
+					}
+				}
+			}
+		}
+	}
+
+	nav {
+		clear: right;
+		float: right;
+
+		form {
+			display: none;
+		}
+
+		@media screen and (max-width: 768px) {
+			float: none;
+			
+			ul {
+				text-align: center;
+			}
+		}
+
+		@media screen and (max-width: 580px) {
+			display: none;
+		}
+	}
+	
+}
+
+#sidr-main {
+	form {
+		margin: 0 5px;
+		
+		fieldset {
+			border: 0;
+			margin: 0;
+			padding: 0.3em 0;
+
+			input {
+				background: #666;
+				float: left;
+				height: 46px;
+				line-height: 46px;
+				margin: 0;
+				width: 70%;
+			}
+
+			button {
+				background: #999;
+				color: #fff;
+				float: right;
+				height: 46px;
+				line-height: 46px;
+
+				span {
+					height: 46px;
+					line-height: 46px;
+				}
+			}
+		}
+	}
+}
+
+.pageHeader {
+	background: $featurebackgroundColor;
+	height: 185px;
+
+	@media screen and (max-width : 580px) {
+		height: 100px;
+	}
+
+	.pageBanner {
+		left: 0;
+		height: 100%;
+		top: 0;
+		position: absolute;
+		width: 100%;
+	}
+
+	.logo { 
+		position: relative;
+
+		img {
+			padding-top: 15px;
+
+			@media screen and (max-width : 580px) {
+				padding-top: 10px;
+				max-height: 90%; 
+			}
+
+		}
+
+	}
+
+}
+
+#mobile-header {
+    display: none;
+}
+@media screen and (max-width: 580px){
+    #mobile-header {
+    	box-sizing: border-box;
+        display: block;
+        float: left;
+        width: 13%;
+		padding: 10px 0 0 0;
+		position: relative;
+		z-index: 400;
+    }
+}
+
+/*   ===================================================================================================
+     4. Navigation
+======================================================================================================== */
+
+/* ----- a. Main Menu ----- */
+nav {
+	position: relative;
+	z-index: 101;
+
+	@media screen and (max-width : 580px) {
+		height: auto;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0 auto;
+		padding: 0;
+		position: relative;
+		max-width: 970px;
+		text-align: right;
+
+		@media screen and (max-width : 580px) {
+			height: auto;
+		}
+	}
+
+	li {
+		display: inline-block;
+		//margin-left: -4px;
+		margin: 0 0 0 5px;
+		padding: 0;
+		position: relative;
+
+		a {
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			color: $navColor;
+			display: inline-block;
+			@include font(400);
+			font-size: 1.333333333333333333em;
+			padding: 2px 5px;
+			position: relative;
+			text-decoration: none;
+
+			&:hover{
+				color: $navColorHover;
+				text-decoration: none;
+				background: $navBackgroundColorHover;
+			}
+
+			@media screen and (max-width : 680px) {
+				
+			}
+
+			@media screen and (max-width : 580px) {
+				height: auto;
+				line-height: 1.6em;
+				padding: 12px;
+			}
+		}
+
+		&:first-child {
+			margin: 0;
+		}
+
+		.hover{
+			color: $navColorHover;
+			text-decoration: none;
+			background: $navBackgroundColorHover;
+		}
+
+		// Drop Down
+		&:hover ul{
+			background: $navBackgroundColor;
+			display: block;
+
+			@media screen and (max-width : 580px) {
+				display: none;
+			}
+
+		}
+
+		ul{
+			border: 1px solid #ccc;
+			display: none;
+			position: absolute;
+			top: 2.3em;
+			width: 180px;
+		}
+
+		li{
+			display: block;
+			float: none;
+			margin: 0;
+			text-align: left;
+			width: 230px;
+
+			a {
+				background: $navBackgroundColor;
+				-webkit-border-radius: 0;
+				-moz-border-radius: 0;
+				border-radius: 0;
+				color: $navDropdownColor;
+				display: block;
+				float: none;
+				@include font(400);
+				font-size: 1.16666666667em;
+				line-height: 2;
+				margin: 0;
+				padding: 0 10px;
+				text-align: left;
+				text-transform: none;
+				width: 160px;
+
+				&:hover{
+					background: $navBackgroundColorHover;
+					color: $navColorHover;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	.v65-pageAParent {
+		background: $navBackgroundColorHover;
+		color: $navColorHover;
+		text-decoration: none;
+	}
+
+	.v65-home {
+		@media screen and (max-width : 835px) {
+			display: none;
+		}
+	}
+
+	.v65-selected {
+		background: $navBackgroundColorHover;
+		color: $navColorHover;
+		text-decoration: none;
+	}
+}
+
+/* ----- b. Link to Footer Navigation ----- */
+.footerMenuLink {
+	display: none;
+	
+	@media screen and (max-width : 580px) {
+		bottom: 0;
+		color: $navColor;
+		display: block;
+		font-size: 1em;
+		height: 4em;
+		line-height: 4em;
+		padding: 0 15px;
+		position: absolute;
+		right: 0;
+		z-index: 100;
+
+		i {
+			font-size: 1.5em;
+		}
+	}
+
+}
+
+/* ----- c. Sub Menu ----- */
+.subMenu {
+	width: 22%;
+
+	@media screen and (max-width : 580px) {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	h4 {
+		background: image-url('stripes.png') repeat top left;
+		border-bottom: 8px solid $submenuBar;
+		color: $headingAltColor;
+		font-style: normal;
+		margin: 0;
+		padding: 0.75em 0.5em;
+
+		@media screen and (max-width : 580px) {
+			display: none;
+		}
+
+	}
+
+	ul{
+		border-bottom: 1px solid #d4d4d4;
+		border-left: 1px solid #d4d4d4;
+		border-right: 1px solid #d4d4d4;
+		list-style: none;
+		margin: 0 0 1em;
+		padding: 0;
+
+		@media screen and (max-width : 580px) {
+			border: 0;
+			padding: 0;
+		}
+	}
+
+	li{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		line-height: 2em;
+
+		@media screen and (max-width : 580px) {
+			border-bottom: 1px solid $subNavColor;
+			//height: 4em;
+			line-height: 4em;
+			text-align: center;
+		}
+
+		a {
+			color: $subNavColor;
+			display: block;
+			font-size: 1.1em;
+			padding: 0.5em;
+
+			@media screen and (max-width : 580px) {
+				display: block;
+				padding: 0;
+			}
+			
+			&:hover{
+				background: $subNavColorHoverBackground;
+				 color: $subNavColorHover;
+				 text-decoration: none;
+			}
+		}
+
+		ul{
+			border: 0;
+			margin: 0 0 0 1em;
+
+			@media screen and (max-width: 580px) {
+				margin: 0;
+			}
+		}
+	}
+
+	.v65-pageAParent {
+		background: $subNavColorHoverBackground;
+		color: $subNavColorHover;
+	}
+
+	.v65-leftSelected{
+		background: $subNavColorHoverBackground;
+		color: $subNavColorHover;
+	}
+
+}
+
+
+/*   ===================================================================================================
+     5. Content
+======================================================================================================== */
+
+/* ----- a. Homepage Styles ----- */
+.homepageContent {
+	padding: 40px 0;
+
+	@media screen and (max-width : 970px) {
+		padding: 20px 0;
+	}
+
+}
+
+	.homepageImage {
+		height: 525px;
+		margin: 0 0 2em 0;
+		width: 100%;
+
+		@media screen and (max-width: 768px) {
+			height: initial;
+		}
+
+		.homepageBanner {
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			height: 100%;
+
+
+
+			.homepageBannerText {
+				max-width: 475px;
+				margin: 0 auto;
+				padding: 9em 0 0 0;
+				width: 100%;
+
+				@media screen and (max-width : 970px) {
+					width: 96%;
+				}
+
+				@media screen and (max-width: 768px) {
+					padding: 3em 0 0 0;
+				}
+
+				@media screen and (max-width: 580px) {
+					font-size: 0.7em;
+				}
+
+				strong, p, em {
+					color: #fff;
+					line-height: 1.1;
+					margin: 0;
+				}
+
+				strong {
+					@include font(400);
+					font-size: 2.2em;
+				    margin-bottom: 0.5em;
+				}
+
+				p{
+					font-size: 2em;
+					@include font(400);
+				}
+
+				em {
+					font-style: normal;
+					@include font(400);
+					font-size: 0.7em;
+				}
+				
+				hr {
+					background: #fff;
+				}
+
+				a {
+					margin: 1em 0;
+				}
+			}
+		}
+
+		@media screen and (max-width : 580px) {
+			// float: none;
+			// margin-right: 0;
+			// max-width: 480px;
+			// text-align: center;
+			// width: 100%;
+		}
+
+		a {
+			background: $secondaryColor !important;
+
+			&:hover {
+				background: lighten($secondaryColor, 10%) !important;
+			}
+
+			span {
+				background: $secondaryColor !important;
+
+				&:hover {
+					background: lighten($secondaryColor, 10%) !important;
+				}
+			} 
+		}
+	}
+
+	.homepageText {
+		float: left;
+		width: 67%;
+
+		@media screen and (max-width : 580px) {
+			float: none;
+			margin: 0;
+			width: 100%;
+		}
+
+	}
+
+	.pageFeatureProducts {
+		
+		.v65-productGroup-title {
+			background: $featuredProductDot repeat-x 0;
+			background-size: 11px 9px;
+			border-bottom: 1px solid #E6E5E5;
+			margin-bottom: 2em;
+			padding: 0.5em 0;
+			text-align: center;
+			
+			span {
+				background: $backgroundColor;
+				padding: 0 0.5em;
+			}
+		}	
+
+		.v65-product-title {
+			width: 100%;
+
+			@media screen and (max-width: 768px) {
+				width: 90%;
+			}	
+		}
+
+		.v65-productGroup-products {
+			text-align: left;
+
+			.v65-productGroup-product {
+				margin: 0 0 1em;
+				width: 33%;
+				min-height: 290px;
+				@media screen and (max-width: 768px) {
+					float: none;
+					margin: 0 auto;
+					width: 400px;
+				}
+
+				@media screen and (max-width: 400px) {
+					margin: 2.5em 0;
+					width: 95%;
+				}
+
+				.v65-product-photo {
+					float: left;
+					width: 25%;
+					margin-right: 3%;
+				}
+
+				
+
+				.v65-product-teaser {
+					width: 90%;
+
+					p {
+						margin: 0 0 0.5em;
+					}
+				}
+			}
+		}
+	}
+
+	.v65-product-title {
+		font-size: 1.5em;
+		@include font(400);
+
+		a {
+			color: $fontColor;
+		}
+	}
+
+	.v65-product-addToCart {
+		margin: 0;
+
+		input {
+			background: #ddd;
+			border: 1px solid #bbb;
+			-webkit-border-radius: 0.385em;
+			-moz-border-radius: 0.385em;
+			border-radius: 0.385em; 
+			height: 2.9em;
+			line-height: 3.1em;
+
+			@media screen and (max-width: 580px) {
+				height: 4.8em;
+				line-height: 5.1em;
+			}
+		}
+
+		button.defaultBtn span {
+			font-size: 15px;
+		}
+	}
+
+	.homepagePromo, .newsletterPromo {
+		background: image-url('stripes.png') top left;
+		margin: 1em 0;
+		min-height: 6em;
+		padding: 1em 0;
+
+		@media screen and (max-width: 768px) {
+			
+		}
+
+		.promoText {
+			float: left;
+			width: 50%;
+
+			.bigText {
+				color: #000;
+				float: left;
+				@include font(400);
+				font-size: 4em;
+				margin: 0 2% 0 0;
+				width: 45%;
+
+				@media screen and (max-width: 1024px) {
+					font-size: 3.5em;
+					width: 50%;
+				}
+
+				@media screen and (max-width: 768px) {
+					text-align: right;
+					width: 45%;
+				}
+
+				@media screen and (max-width: 580px) {
+					float: none;
+					text-align: center;
+					margin: 0;
+					width: 100%;
+				}
+			}
+			
+			.smallText {
+				color: #000;
+				float: left;
+				font-size: 1.4em;
+				@include font(400);
+				width: 45%;
+
+				@media screen and (max-width: 768px) {
+					padding: 0.7em 0;
+				}
+
+				@media screen and (max-width: 580px) {
+					float: none;
+					padding: 0;
+					text-align: center;
+					width: 100%;
+				}
+			}
+
+			@media screen and (max-width: 768px) {
+				margin: 0 auto 10px;
+				width: 100%;
+			}
+		}
+		
+
+		#v65-subscribeWidget {
+			float: left;
+			width: 50%;
+
+			@media screen and (max-width: 768px) {
+				float: none;
+				margin: 0 auto;
+				width: 70%;
+			}
+
+			@media screen and (max-width: 580px) {
+				width: 100%;
+			}
+
+			form {
+				margin: 0;
+			}
+
+			input {
+				-webkit-border-radius: 0.385em;
+				-moz-border-radius: 0.385em;
+				border-radius: 0.385em;
+				float: left;
+				height: 4em;
+				line-height: 4em;
+				margin: 2.5%;
+				width: 50%;
+			}
+
+			button {
+				background: #333;
+				float: left;
+				margin: 2.5% 0;
+				width: 25%;
+
+				@media screen and (max-width: 768px) {
+					width: 40%;
+				}
+
+				@media screen and (max-width: 580px) {
+					height: 4.1em;
+					width: 33%;
+				}
+
+				span {
+					background: #333;
+					font-size: 1.2em;
+					height: 3.4em;
+					line-height: 3.4em;
+					padding: 0;
+
+					@media screen and (max-width: 580px) {
+						height: 2.5em;
+						line-height: 2.5em;
+					}
+				}
+			}
+
+			span.error {
+				margin: 0 0 0 18px;
+			}
+
+		}
+	}
+
+	.newsletterPromo {
+		margin: 1em 0 0;
+	}
+
+	.homepageContentPods {
+		.v65-pod {
+			float: left;
+			width: 47.5%;
+
+			&:first-child {
+				margin: 0 5% 0 0;
+			}
+
+			@media screen and (max-width: 768px) {
+				float: none;
+				margin: 0 auto;
+				width: 95%;
+
+				&:first-child {
+					margin: 0 auto;
+				}
+
+			}
+
+			.v65-podTitle {
+				border-bottom: 1px solid $fontColor;
+				color: $headingColor;
+				font-size: 1.5em;
+				font-weight: bold;
+				margin: 0 0 0.5em 0;
+				padding: 0 0 0.5em 0;
+			}
+
+			.v65-podDescription {
+				color: $fontColor;
+
+				#{headings(1,6)}{
+					color: $headingColor;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+/* ----- b. Page Styles ----- */
+
+.pageContent {
+	background: $backgroundColor;
+	padding: 0 0 1em;
+
+	// @media screen and (max-width : 970px) {
+	// 	padding: 20px 0;
+	// }
+
+}
+
+.pageText {
+	float: right;
+	width: 75%;
+
+	@media screen and (max-width : 580px) {
+		float: none;
+		margin: 0 0 2em 0;
+		width: 100%;
+	}
+
+}
+
+.pageWideText {
+	margin: 0 auto;
+	width: 90%;
+
+	@media screen and (max-width : 835px) {
+		float: none;
+		margin: 0 0 2em 0;
+		width: 100%;
+	}
+
+}
+
+.colWrapper {
+	margin-bottom: 2em;
+	width: 100%;
+}
+
+	.colWrapper:before,.colWrapper:after { content:""; display:table; }
+	.colWrapper:after { clear:both; }
+
+
+	.col2 { 
+		float: left;
+		margin-left: 6%;
+		width: 47%;
+	}
+
+	.col2:first-child { 
+		float: left;
+		margin-left: 0%;
+		width: 47%;
+	}
+
+	.col3 { 
+		float: left;
+		margin-left: 5%;
+		width: 30%;
+	}
+
+	.col3:first-child { 
+		float: left;
+		margin-left: 0%;
+		width: 30%;
+	}
+
+	@media screen and (max-width: 580px) {
+
+		.col2 { 
+			float: none;
+			margin-left: 0;
+			margin-bottom: 1.5em;
+			width: 100%;
+		}
+
+		.col2:first-child { 
+			float: none;
+			width: 100%;
+		}
+
+		.col3 { 
+			float: none;
+			margin-left: 0;
+			margin-bottom: 1.5em;
+			width: 100%;
+		}
+
+		.col3:first-child { 
+			float: none;
+			width: 100%;
+		}
+
+	}
+	
+
+/*   ===================================================================================================
+     6. Blog Template
+======================================================================================================== */
+
+.blogContent{
+	float: left;
+	padding: 20px 4% 0 0;
+	width: 56%;
+
+	@media screen and (max-width : 600px) {
+		padding: 20px 4% 0 0;
+		width: 66%;
+	}
+
+	@media screen and (max-width : 580px) {
+		float: none;
+		margin: 0 0 2em 0;
+		padding: 0;
+		width: 96%;
+	}
+
+}
+
+.blogFilter {
+	border-bottom: 1px solid #d4d4d4;
+	border-left: 1px solid #d4d4d4;
+	border-right: 1px solid #d4d4d4;
+
+	ul {
+		border: 0;
+		padding: 0 0 0 1.5em;
+	}
+
+	h5 {
+		color: #a3a3a3;
+		@include font(400);
+		margin: 0 0 0 1em;
+	}
+
+	li a {
+		color: $primaryColor;
+		line-height: 2em;
+		&:hover {
+			background: none;
+			color: lighten($primaryColor, 10%);
+		}
+	}
+
+	& > div {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 1em 0 1em 1.5em;
+
+		& > a {
+			
+
+			strong {
+				font-weight: normal;
+				padding: 0.5em;
+			}
+		}
+	}
+
+	.v65-recentEntriesTitle {
+		font-weight: normal;
+		line-height: 0.5;
+	}
+
+	.v65-recentEntriesDate {
+		padding: 0 0 0 0.5em;
+	}
+
+	@media screen and (max-width: 580px) {
+		text-align: center;
+	}
+}
+
+/*
+.blogRightWrapper {
+	float: right;
+	padding: 20px 0 0 0;
+	width: 40%;
+
+	ul{
+		list-style: none;
+		margin: 0 0 1em;
+		padding: 0;
+	}
+
+	li{
+		font-size: 11px;
+		margin: 0 0 0 10px;
+	}
+
+	@media screen and (max-width : 600px) {
+		float: left;
+		margin: 0 0 2em 0;
+		padding: 0;
+		width: 30%;
+	}
+
+	@media screen and (max-width : 580px) {
+		float: none;
+		margin: 0 0 2em 0;
+		padding: 0;
+		width: 100%;
+	}
+
+}
+
+	.blogFilterLeft {
+		float: left;
+		padding-right: 4%;
+		width: 48%;
+
+		@media screen and (max-width : 600px) {
+			float: none;
+			margin: 0 0 2em 0;
+			width: 100%;
+		}
+
+		@media screen and (max-width : 580px) {
+			float: left;
+			padding-right: 4%;
+			width: 48%;
+		}
+
+	}
+
+	.blogFilterRight {
+		float: left;
+		width: 48%;
+
+		@media screen and (max-width : 600px) {
+			float: none;
+			margin: 0 0 2em 0;
+			width: 100%;
+		}
+
+		@media screen and (max-width : 580px) {
+			float: left;
+			width: 48%;
+		}
+	}
+*/
+/*   ===================================================================================================
+     7. Print Template
+======================================================================================================== */
+
+.printBody {
+	background-color: #fff;
+	background-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+	.printWrapper {
+		margin: 0 auto;
+		width: 700px;
+	}
+
+		.printHeader {
+			height: 150px;
+			width: 700px;
+		}
+
+		.printContent {
+			text-align: left;
+			width: 700px;
+		}
+
+.print {
+	padding: 0 2em;
+}
+
+/*   ===================================================================================================
+     8. Buttons
+======================================================================================================== */
+button {
+	&.defaultBtn,  &.modalBtn,  &.largeBtn{
+		background: $buttonColor;
+		border-radius: 0.385em;
+		@include font(400);
+		//font-size: 1em;
+		span{
+			background: $buttonColor;
+			color: $buttonFontColor;
+			border-radius: 0.385em;
+			padding: 0 1em;
+
+			@media screen and (max-width: 580px) {
+				padding: 0 0.3em;
+			}
+		}
+		&:hover{
+			background:lighten($buttonColor, 10%);
+			span{
+				background:lighten($buttonColor, 10%);
+			}
+		}
+	}
+
+	&.altBtn, &.altModalBtn, &.altLargeBtn{
+		background:$altButtonColor;
+		color: $buttonFontColor;
+		@include font(400);
+		span{
+			background:$altButtonColor;
+			color: $altButtonFontColor;
+			border-radius: 0.385em;
+			padding: 0 1em;
+		}
+		&:hover{
+			background: lighten($altButtonColor, 10%);
+			span{
+				background: lighten($altButtonColor, 10%);
+			}
+		}
+
+	}
+}
+
+a{
+	&.linkBtn, &.modalLinkBtn, &.largeLinkBtn, &.fullWidthBtn{
+		background:$buttonColor;
+		border-radius: 0.385em;
+		@include font(400);
+		//font-size: 1em;
+		span{
+			background:$buttonColor;
+			color: $buttonFontColor;
+			border-radius: 0.385em;
+			padding: 0 1em;
+		}
+		&:hover{
+			background:lighten($buttonColor, 10%);
+			text-decoration: none;
+
+			span{
+				background:lighten($buttonColor, 10%);
+			}
+		}
+	}
+
+	&.fullWidthBtn{
+		display: block;
+		font-size: 1.1em;
+		max-width: 100%;
+		text-align: center;
+		width: 100%;
+	}
+
+	&.linkAltBtn, &.modalLinkAltBtn, &.modalLinkAltBtn{
+		background:$altButtonColor;
+		border-radius: 0.385em; 
+		@include font(400);
+		span{
+			background:$altButtonColor;
+			border-radius: 0.385em; 
+			color: $altButtonFontColor;
+			padding: 0 1em;
+		}
+		&:hover{
+			background: lighten($altButtonColor, 10%);
+			span{
+				background: lighten($altButtonColor, 10%);
+			}
+		}
+	}
+
+	&.modalLinkBtn, &.modalLinkAltBtn, &.modalLinkAltBtn{
+		min-width: auto;
+	}
+}
+
+.v65-quickView-close {
+
+	a {
+		border-radius: 0.385em; 
+		background: lighten($altButtonColor, 10%);
+
+		&:hover{
+			background: lighten($altButtonColor, 10%);
+			
+		}
+		
+	}
+
+}
+
+
+
+/*   ===================================================================================================
+     9. Footer
+======================================================================================================== */
+
+footer {	
+	width: 100%;
+
+	@media screen and (max-width: 580px) {
+		text-align: center;
+	}
+
+	.footerMain {
+		background: $footerBackground;
+		color: $footerColor;
+		float: left;
+		padding: 2em 0;
+		width: 100%;
+
+		h3 {
+			color: $footerColor;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+
+			a {
+				color: #CCCBCC;;
+			}
+		}
+
+		.footerLeft {
+			float: left;
+			width: 40%;
+
+			@media screen and (max-width: 768px) {
+				width: 60%;
+			}
+
+			@media screen and (max-width: 580px) {
+				margin-bottom: 1em;
+				width: 95%;
+
+				table {
+					tr {
+						td {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+		.footerMiddle {
+			float: left;
+			width: 20%;
+
+			@media screen and (max-width: 768px) {
+				width: 40%;
+			}
+
+			@media screen and (max-width: 580px) {
+				width: 95%;
+
+				ul {
+					margin: 0 auto;
+					text-align: left;
+					width: 110px;
+				}
+			}
+
+			a {
+				line-height: 2.2em;
+			}
+
+			i {
+				color: $secondaryColor;
+				font-size: 2em;
+			}
+		}
+
+		.footerRight {
+			float: left;
+			width: 40%;
+
+			ul {
+				margin: 3em 0 0 0;
+			}
+
+			@media screen and (max-width: 768px) {
+				width: 100%;
+
+				ul {
+					margin: 1em 0 0 0;
+	
+					li {
+						display: inline;
+						margin: 0 0 0 10px;
+
+						&:first-child {
+							margin: 0;
+						}
+					}
+				}
+			}
+
+			@media screen and (max-width: 580px) {
+				width: 95%;
+	
+				ul {
+					margin: 1.5em 0 0 0;
+
+					li {
+						display: block;
+						line-height: 2;
+						margin: 0;
+
+						a {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footerCopyright {
+		background: $backgroundColor;
+		float: left;
+		padding: 1em 0;
+		width: 100%;
+
+		p {
+			color: $footerCopyrightColor;
+			display: inline;
+			margin: 0;
+
+			a { 
+				color: $footerCopyrightColor;
+			}
+		}
+
+		.copyright {
+				border-left: 1px solid $footerCopyrightColor;
+				padding: 0 0 0 5px;
+				margin: 0 0 0 3px;
+			}
+
+		@media screen and (max-width: 580px) {
+			padding: 2em 0;
+
+			p {
+				display: block;
+			}
+
+			.copyright {
+				border-left: 0;
+				padding: 0;
+				margin: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* ----- Checkout footer items ----- */
+.footerSocialCheckout {
+	border-bottom: 0 solid $footerColor;
+	margin: 0;
+
+	.copyright {
+		margin: 0;
+	}
+}
+
+.footerNavWrapperCheckout {
+	margin: 0;
+
+	.v65-podDescription {
+		border-right: 0 solid $footerColor;
+	}
+
+}
+
+.accoladeCheckout {
+	text-align: center;	
+}
+
+/*   ===================================================================================================
+     10. Vin65 Overrides
+======================================================================================================== */
+
+fieldset#v65-fieldset-choices {
+	@media screen and (min-width:725px){
+		display: block;
+		margin: 0 0 10px 0;
+		border: 1px solid #ccc;
+		width: 360px;
+	}
+}
+
+.alert {
+	color:#fff;
+	background:#c53939;
+}
+.customForms{
+	.v65-form {
+		@media screen and (min-width:581px){
+			width: 250px;
+			margin: 0 0 1em;
+			float: right;
+			padding-left: 20px;
+		}
+	}
+}
+
+.aboutUs.equalize{
+	@media screen and (min-width:581px){
+		float: left;
+		width: 46%;
+		padding:2%;
+	}
+}
+
+.v65-productAddToCart-drilldownActivate{
+	.v65-product-actionMessage {
+		@media screen and (max-width:580px){
+			padding:1em;
+		}
+	}
+}
+
+#v65-shippingWidget {
+	@media screen and (max-width:580px){
+		text-align: center;
+	}
+}
+
+#v65-shippingWidgetTable {
+	@media screen and (max-width:580px){
+		width:200px;
+		margin: 0 auto;
+	}
+}
+
+#v65-fieldset-sourceCode {
+	display:none;
+}
+
+.pageWideText .clear {
+	display:none;
+}
+
+.v65-product-photo {
+	min-height:125px;
+}
+
+.v65-addToCartCase {
+	@media screen and (max-width:600px){
+		display:none;
+	}
+}
+
+#v65-clubFormWrapper {
+	form {
+		width:100%;
+	}
+}
+
+/* ----- a. User Tools ----- */
+#user-tools {
+	position: relative;
+
+	a {
+		color: $userToolsColor;
+	}
+
+	.v65-yourAccount, .v65-editProfile {
+		border-right: 1px solid $userToolsColor;
+
+		@media screen and (max-width: 580px) {
+			border-right: 1px solid #666; 
+			width: 30%;
+		}
+	}
+
+	#v65-modalCart {
+		strong {
+			font-weight: normal;
+		}
+
+		@media screen and (max-width: 580px) {
+			width: 100%;
+		}
+	}
+
+	.v65-login, .v65-logout {
+		width: 23%;
+	}
+}
+
+/* ----- b. Homepage Product Group ----- */
+
+.homepageProductGroup .v65-productGroup-products{
+	text-align: left;
+	width: 100%;
+}
+
+	.homepageProductGroup .v65-productGroup-title{
+		color: $headingColor;
+		@include font(400);
+		font-size: 2em;
+		line-height: 1.2;
+		margin: 0.25em 0 0.5em;
+	}
+
+	.homepageProductGroup .v65-productGroup-teaser{
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+
+	.homepageProductGroup .v65-productGroup-product{
+		margin: 0 0 1em;
+		width: 100%;
+	}
+
+		.homepageProductGroup .v65-product-photo{
+			float: left;
+			width: auto;
+		}
+
+		.homepageProductGroup .v65-productGroup-product .v65-product-addToCart-priceWrapper{
+			display: inline;
+		}
+
+/* ----- c. Product List Layouts ----- */
+.v65-product1UpStore {
+	border-bottom: 0;
+	margin: 0;
+
+	@media screen and (max-width: 580px) {
+		margin-bottom: 1em;
+	}
+}
+
+.v65-product2Up .v65-product-addToCart-priceWrapper {
+	margin-right: 9em;
+}
+
+.v65-professionalReviews {
+	display: none;
+}
+
+/* ----- d. Pagination Styles ----- */
+.v65-product-pagination {
+	a {
+		background: none !important;
+		color: #c7c5c6;
+
+	}
+
+	strong {
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+		color: #000;
+		display: block;
+		font-weight: normal;
+		height: 2em;
+		line-height: 2em;
+		text-align: center;
+		width: 2em;
+	}
+}
+
+/* ----- e. Cart/Checkout ----- */
+#v65-cartCheckOutCoupons form {
+	width: 255px;
+}
+
+#v65-modalContent, #v65-signUpClubSummaryWrapper, #v65-cartTable th, #v65-cartTable td, #v65-checkoutCartSummaryWrapper {
+	background-color: $backgroundColor !important;
+}
+
+.print {
+	#v65-cartTable th, #v65-cartTable td {
+		background-color: initial !important;
+	}
+	h1,h4 {
+		color: #000;
+	}
+}
+
+/* ----- f. Product Drilldown Social Bar ----- */
+.v65-socialMediaBar-Email {
+	padding-right: 8px;
+}
+
+
+/*   ===================================================================================================
+     11. IE8 Fixes
+======================================================================================================== */
+//Numbers on control nav show through control dots
+a.nivo-control {
+	font-size: 0;
+}
+
+//When using external font source, IE8 password dots don't appear
+//Must change font-family for them to appear
+input[type="password"] {
+	font-family: Arial;
+}
+
+//Contact Us form inputs getting cut off
+.v65-form input[type=text], .v65-form input[type=password], .v65-form input[type='username'] {
+	width: 215px;
+}

@@ -1,0 +1,2196 @@
+@charset "utf-8";
+/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace,serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+ * jQuery Nivo Slider v3.0.1
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+/* The Nivo Slider styles */
+.nivoSlider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: white url(../nivo/loading.gif) no-repeat 50% 50%;
+}
+
+.nivoSlider img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.nivo-main-image {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  display: none;
+  cursor: hand;
+  background-color: #fff;
+  filter: alpha(opacity=0);
+  /*non ie*/
+  opacity: 0;
+}
+
+/* The slices and boxes in the Slider */
+.nivo-slice {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+  top: 0;
+}
+
+.nivo-box {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.nivo-box img {
+  display: block;
+}
+
+/* Caption styles */
+.nivo-caption {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  z-index: 8;
+  padding: 5px 10px;
+  opacity: 0.8;
+  overflow: hidden;
+  display: none;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=8);
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+
+.nivo-caption p {
+  padding: 5px;
+  margin: 0;
+}
+
+.nivo-caption a {
+  display: inline !important;
+}
+
+.nivo-html-caption {
+  display: none;
+}
+
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../nivo/arrows.png) no-repeat;
+  text-indent: -9999px;
+  border: 0;
+  position: absolute;
+  top: 45%;
+  z-index: 9;
+  cursor: pointer;
+}
+
+a.nivo-prevNav {
+  left: 15px;
+}
+
+a.nivo-nextNav {
+  background-position: -30px 0px;
+  right: 15px;
+}
+
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.nivo-controlNav a {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(../nivo/bullets.png) no-repeat;
+  color: transparent;
+  border: 0;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.nivo-controlNav a.active {
+  background-position: 0 -22px;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot?66280190");
+  src: url("../fonts/fontello.eot?66280190#iefix") format("embedded-opentype"), url("../fonts/fontello.woff?66280190") format("woff"), url("../fonts/fontello.ttf?66280190") format("truetype"), url("../fonts/fontello.svg?66280190#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?66280190#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - magrins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-youtube:before {
+  content: '\55';
+}
+
+/* 'U' */
+.icon-acrobat:before {
+  content: '\e3';
+}
+
+/* 'ã' */
+.icon-home:before {
+  content: '\2302';
+}
+
+/* '⌂' */
+.icon-star:before {
+  content: '\2605';
+}
+
+/* '★' */
+.icon-star-empty:before {
+  content: '\2606';
+}
+
+/* '☆' */
+.icon-menu:before {
+  content: '\2630';
+}
+
+/* '☰' */
+.icon-heart-empty:before {
+  content: '\2661';
+}
+
+/* '♡' */
+.icon-heart:before {
+  content: '\2665';
+}
+
+/* '♥' */
+.icon-layout:before {
+  content: '\268f';
+}
+
+/* '⚏' */
+.icon-mail:before {
+  content: '\2709';
+}
+
+/* '✉' */
+.icon-up-bold:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-down-bold:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-location:before {
+  content: '\e724';
+}
+
+/* '' */
+.icon-basket:before {
+  content: '\e73d';
+}
+
+/* '' */
+.icon-vimeo:before {
+  content: '\f306';
+}
+
+/* '' */
+.icon-twitter:before {
+  content: '\f309';
+}
+
+/* '' */
+.icon-facebook:before {
+  content: '\f30e';
+}
+
+/* '' */
+.icon-gplus:before {
+  content: '\f30f';
+}
+
+/* '' */
+.icon-pinterest:before {
+  content: '\f312';
+}
+
+/* '' */
+.icon-video:before {
+  content: '🎬';
+}
+
+/* '\1f3ac' */
+.icon-user:before {
+  content: '👤';
+}
+
+/* '\1f464' */
+.icon-monitor:before {
+  content: '💻';
+}
+
+/* '\1f4bb' */
+.icon-phone-1:before {
+  content: '📞';
+}
+
+/* '\1f4de' */
+.icon-arrows-ccw:before {
+  content: '\e802';
+}
+
+/* '' */
+.icon-search-1:before {
+  content: '🔍';
+}
+
+/* '\1f50d' */
+/* CSS Document */
+/* ====================================================================================================
+	Table of Content
+	
+	Theme Settings
+	
+	1. Typography
+	2. User Tools
+	3. Header
+	4. Navigation
+		a. Navigation
+		b. Link to Footer Navigation
+		c. Sub Navigation
+	5. Content
+		a. Homepage Styles
+		b. Page Styles
+	6. Blog Template
+	7. Print Template
+	8. Buttons
+	9. Footer
+	10. Vin65 Overrides
+		a. User Tools
+		b. Homepage Product Group
+		c. Product List Layouts
+		d. Pagination Styles
+	11. IE8 Fixes000
+*/
+/*   ===================================================================================================
+     1. Typography - These get copied into the admin.css
+======================================================================================================== */
+html {
+  font-size: 75%;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #676767;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #676767;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2.25em;
+  line-height: 1.3333333333333333;
+  margin-bottom: 0.6666666666666666em;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-size: 1.3125em;
+  line-height: 1.1428571428571428;
+  margin-bottom: 1.1428571428571428em;
+}
+
+h5 {
+  font-size: 1.125em;
+  line-height: 1.3333333333333333;
+  margin-bottom: 1.3333333333333333em;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+.v65-title {
+  font-size: 2em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+  color: #676767;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.v65-title a {
+  color: #676767;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.v65-subtitle {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+  color: #676767;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+p, blockquote {
+  margin: 0 0 1.5em;
+  line-height: 1.5;
+}
+
+dl, ol, ul {
+  margin: 0 0 1.5em;
+}
+
+dd, dt, li {
+  line-height: 1.5;
+  margin: 0;
+}
+
+a {
+  color: #56c1da;
+  text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  text-decoration: underline;
+}
+
+img {
+  border: none;
+  height: auto !important;
+  max-width: 100%;
+}
+
+form {
+  margin-bottom: 1em;
+}
+
+legend {
+  color: black;
+}
+
+hr {
+  background-color: black;
+  border: 0;
+  color: black;
+  height: 1px;
+}
+
+.wrapper {
+  max-width: 970px;
+  margin: 0 auto;
+  width: 100%;
+}
+@media screen and (max-width: 970px) {
+  .wrapper {
+    padding: 0 2%;
+    width: 96%;
+  }
+}
+
+.backtotop {
+  display: none;
+}
+@media screen and (max-width: 680px) {
+  .backtotop {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 900;
+  }
+  .backtotop a {
+    color: white;
+    background: #1a1a1a;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    display: block;
+    line-height: 5em;
+    height: 5em;
+    width: 5em;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+/*   ===================================================================================================
+     2. User Tools
+======================================================================================================== */
+.userToolsWrapper {
+  background: #505050 url('../images/user-tools-background.png?1393608819');
+  border-bottom: 2px solid #7F8080;
+  height: 3em;
+  position: relative;
+  width: 100%;
+  z-index: 999;
+}
+@media screen and (max-width: 580px) {
+  .userToolsWrapper {
+    height: 4em;
+    line-height: 4em;
+  }
+}
+
+/*   ===================================================================================================
+     3. Header
+======================================================================================================== */
+header {
+  background: white;
+  min-height: 115px;
+  padding: 0 0 2em 0;
+  position: relative;
+  width: 100%;
+  z-index: 100;
+}
+@media screen and (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+}
+header .wrapper {
+  border-bottom: 1px solid black;
+  padding: 2em 0 1em;
+  position: relative;
+}
+@media screen and (max-width: 580px) {
+  header .wrapper > form {
+    display: none;
+  }
+}
+header .logo {
+  float: left;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  header .logo {
+    float: none;
+  }
+}
+@media screen and (max-width: 580px) {
+  header .logo img {
+    padding-top: 10px;
+    max-height: 90%;
+  }
+}
+header form {
+  float: right;
+  margin: 0 0 2.5em;
+  width: 245px;
+}
+@media screen and (max-width: 768px) {
+  header form {
+    float: none;
+    margin: 2em auto;
+  }
+}
+header form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+header form fieldset #v65-searchWidgetInput {
+  float: left;
+  width: 100%;
+}
+header form fieldset #v65-searchWidgetInput input {
+  background: white;
+  border: 0;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: black;
+  height: 2em;
+  line-height: 2em;
+  outline: none;
+  -webkit-appearance: none;
+  width: 100%;
+}
+header form fieldset #v65-searchWidgetButton button {
+  background: url("../images/search-icon.jpg") no-repeat scroll 0 3px transparent;
+  border-radius: 0;
+  font-size: 0;
+  height: 23px;
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 23px;
+}
+header form fieldset #v65-searchWidgetButton button span {
+  background: none;
+}
+header nav {
+  clear: right;
+  float: right;
+}
+header nav form {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header nav {
+    float: none;
+  }
+  header nav ul {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 580px) {
+  header nav {
+    display: none;
+  }
+}
+
+#sidr-main form {
+  margin: 0 5px;
+}
+#sidr-main form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0.3em 0;
+}
+#sidr-main form fieldset input {
+  background: #666;
+  float: left;
+  height: 46px;
+  line-height: 46px;
+  margin: 0;
+  width: 70%;
+}
+#sidr-main form fieldset button {
+  background: #999;
+  color: #fff;
+  float: right;
+  height: 46px;
+  line-height: 46px;
+}
+#sidr-main form fieldset button span {
+  height: 46px;
+  line-height: 46px;
+}
+
+.pageHeader {
+  background: white;
+  height: 185px;
+}
+@media screen and (max-width: 580px) {
+  .pageHeader {
+    height: 100px;
+  }
+}
+.pageHeader .pageBanner {
+  left: 0;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+.pageHeader .logo {
+  position: relative;
+}
+.pageHeader .logo img {
+  padding-top: 15px;
+}
+@media screen and (max-width: 580px) {
+  .pageHeader .logo img {
+    padding-top: 10px;
+    max-height: 90%;
+  }
+}
+
+#mobile-header {
+  display: none;
+}
+
+@media screen and (max-width: 580px) {
+  #mobile-header {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 13%;
+    padding: 10px 0 0 0;
+    position: relative;
+    z-index: 400;
+  }
+}
+/*   ===================================================================================================
+     4. Navigation
+======================================================================================================== */
+/* ----- a. Main Menu ----- */
+nav {
+  position: relative;
+  z-index: 101;
+}
+@media screen and (max-width: 580px) {
+  nav {
+    height: auto;
+  }
+}
+nav ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  max-width: 970px;
+  text-align: right;
+}
+@media screen and (max-width: 580px) {
+  nav ul {
+    height: auto;
+  }
+}
+nav li {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  padding: 0;
+  position: relative;
+}
+nav li a {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #676767;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.333333333333333333em;
+  padding: 2px 5px;
+  position: relative;
+  text-decoration: none;
+}
+nav li a:hover {
+  color: white;
+  text-decoration: none;
+  background: #56c1da;
+}
+@media screen and (max-width: 580px) {
+  nav li a {
+    height: auto;
+    line-height: 1.6em;
+    padding: 12px;
+  }
+}
+nav li:first-child {
+  margin: 0;
+}
+nav li .hover {
+  color: white;
+  text-decoration: none;
+  background: #56c1da;
+}
+nav li:hover ul {
+  background: white;
+  display: block;
+}
+@media screen and (max-width: 580px) {
+  nav li:hover ul {
+    display: none;
+  }
+}
+nav li ul {
+  border: 1px solid #ccc;
+  display: none;
+  position: absolute;
+  top: 2.3em;
+  width: 180px;
+}
+nav li li {
+  display: block;
+  float: none;
+  margin: 0;
+  text-align: left;
+  width: 230px;
+}
+nav li li a {
+  background: white;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  color: #676767;
+  display: block;
+  float: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.16666666667em;
+  line-height: 2;
+  margin: 0;
+  padding: 0 10px;
+  text-align: left;
+  text-transform: none;
+  width: 160px;
+}
+nav li li a:hover {
+  background: #56c1da;
+  color: white;
+  text-decoration: none;
+}
+nav .v65-pageAParent {
+  background: #56c1da;
+  color: white;
+  text-decoration: none;
+}
+@media screen and (max-width: 835px) {
+  nav .v65-home {
+    display: none;
+  }
+}
+nav .v65-selected {
+  background: #56c1da;
+  color: white;
+  text-decoration: none;
+}
+
+/* ----- b. Link to Footer Navigation ----- */
+.footerMenuLink {
+  display: none;
+}
+@media screen and (max-width: 580px) {
+  .footerMenuLink {
+    bottom: 0;
+    color: #676767;
+    display: block;
+    font-size: 1em;
+    height: 4em;
+    line-height: 4em;
+    padding: 0 15px;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+  }
+  .footerMenuLink i {
+    font-size: 1.5em;
+  }
+}
+
+/* ----- c. Sub Menu ----- */
+.subMenu {
+  width: 22%;
+}
+@media screen and (max-width: 580px) {
+  .subMenu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+.subMenu h4 {
+  background: url('../images/stripes.png?1393608819') repeat top left;
+  border-bottom: 8px solid #a9c535;
+  color: #676767;
+  font-style: normal;
+  margin: 0;
+  padding: 0.75em 0.5em;
+}
+@media screen and (max-width: 580px) {
+  .subMenu h4 {
+    display: none;
+  }
+}
+.subMenu ul {
+  border-bottom: 1px solid #d4d4d4;
+  border-left: 1px solid #d4d4d4;
+  border-right: 1px solid #d4d4d4;
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+}
+@media screen and (max-width: 580px) {
+  .subMenu ul {
+    border: 0;
+    padding: 0;
+  }
+}
+.subMenu li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 2em;
+}
+@media screen and (max-width: 580px) {
+  .subMenu li {
+    border-bottom: 1px solid #a3a3a3;
+    line-height: 4em;
+    text-align: center;
+  }
+}
+.subMenu li a {
+  color: #a3a3a3;
+  display: block;
+  font-size: 1.1em;
+  padding: 0.5em;
+}
+@media screen and (max-width: 580px) {
+  .subMenu li a {
+    display: block;
+    padding: 0;
+  }
+}
+.subMenu li a:hover {
+  background: #878787;
+  color: white;
+  text-decoration: none;
+}
+.subMenu li ul {
+  border: 0;
+  margin: 0 0 0 1em;
+}
+@media screen and (max-width: 580px) {
+  .subMenu li ul {
+    margin: 0;
+  }
+}
+.subMenu .v65-pageAParent {
+  background: #878787;
+  color: white;
+}
+.subMenu .v65-leftSelected {
+  background: #878787;
+  color: white;
+}
+
+/*   ===================================================================================================
+     5. Content
+======================================================================================================== */
+/* ----- a. Homepage Styles ----- */
+.homepageContent {
+  padding: 40px 0;
+}
+@media screen and (max-width: 970px) {
+  .homepageContent {
+    padding: 20px 0;
+  }
+}
+
+.homepageImage {
+  height: 525px;
+  margin: 0 0 2em 0;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .homepageImage {
+    height: initial;
+  }
+}
+.homepageImage .homepageBanner {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.homepageImage .homepageBanner .homepageBannerText {
+  max-width: 475px;
+  margin: 0 auto;
+  padding: 9em 0 0 0;
+  width: 100%;
+}
+@media screen and (max-width: 970px) {
+  .homepageImage .homepageBanner .homepageBannerText {
+    width: 96%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .homepageImage .homepageBanner .homepageBannerText {
+    padding: 3em 0 0 0;
+  }
+}
+@media screen and (max-width: 580px) {
+  .homepageImage .homepageBanner .homepageBannerText {
+    font-size: 0.7em;
+  }
+}
+.homepageImage .homepageBanner .homepageBannerText strong, .homepageImage .homepageBanner .homepageBannerText p, .homepageImage .homepageBanner .homepageBannerText em {
+  color: #fff;
+  line-height: 1.1;
+  margin: 0;
+}
+.homepageImage .homepageBanner .homepageBannerText strong {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+}
+.homepageImage .homepageBanner .homepageBannerText p {
+  font-size: 2em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.homepageImage .homepageBanner .homepageBannerText em {
+  font-style: normal;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.7em;
+}
+.homepageImage .homepageBanner .homepageBannerText hr {
+  background: #fff;
+}
+.homepageImage .homepageBanner .homepageBannerText a {
+  margin: 1em 0;
+}
+.homepageImage a {
+  background: #a9c535 !important;
+}
+.homepageImage a:hover {
+  background: #bbd35a !important;
+}
+.homepageImage a span {
+  background: #a9c535 !important;
+}
+.homepageImage a span:hover {
+  background: #bbd35a !important;
+}
+
+.homepageText {
+  float: left;
+  width: 67%;
+}
+@media screen and (max-width: 580px) {
+  .homepageText {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.pageFeatureProducts .v65-productGroup-title {
+  background: url("../images/featured-title-dot.jpg") repeat-x 0;
+  background-size: 11px 9px;
+  border-bottom: 1px solid #E6E5E5;
+  margin-bottom: 2em;
+  padding: 0.5em 0;
+  text-align: center;
+}
+.pageFeatureProducts .v65-productGroup-title span {
+  background: white;
+  padding: 0 0.5em;
+}
+.pageFeatureProducts .v65-product-title {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .pageFeatureProducts .v65-product-title {
+    width: 90%;
+  }
+}
+.pageFeatureProducts .v65-productGroup-products {
+  text-align: left;
+}
+.pageFeatureProducts .v65-productGroup-products .v65-productGroup-product {
+  margin: 0 0 1em;
+  width: 33%;
+  min-height: 290px;
+}
+@media screen and (max-width: 768px) {
+  .pageFeatureProducts .v65-productGroup-products .v65-productGroup-product {
+    float: none;
+    margin: 0 auto;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .pageFeatureProducts .v65-productGroup-products .v65-productGroup-product {
+    margin: 2.5em 0;
+    width: 95%;
+  }
+}
+.pageFeatureProducts .v65-productGroup-products .v65-productGroup-product .v65-product-photo {
+  float: left;
+  width: 25%;
+  margin-right: 3%;
+}
+.pageFeatureProducts .v65-productGroup-products .v65-productGroup-product .v65-product-teaser {
+  width: 90%;
+}
+.pageFeatureProducts .v65-productGroup-products .v65-productGroup-product .v65-product-teaser p {
+  margin: 0 0 0.5em;
+}
+
+.v65-product-title {
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.v65-product-title a {
+  color: black;
+}
+
+.v65-product-addToCart {
+  margin: 0;
+}
+.v65-product-addToCart input {
+  background: #ddd;
+  border: 1px solid #bbb;
+  -webkit-border-radius: 0.385em;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
+  height: 2.9em;
+  line-height: 3.1em;
+}
+@media screen and (max-width: 580px) {
+  .v65-product-addToCart input {
+    height: 4.8em;
+    line-height: 5.1em;
+  }
+}
+.v65-product-addToCart button.defaultBtn span {
+  font-size: 15px;
+}
+
+.homepagePromo, .newsletterPromo {
+  background: url('../images/stripes.png?1393608819') top left;
+  margin: 1em 0;
+  min-height: 6em;
+  padding: 1em 0;
+}
+.homepagePromo .promoText, .newsletterPromo .promoText {
+  float: left;
+  width: 50%;
+}
+.homepagePromo .promoText .bigText, .newsletterPromo .promoText .bigText {
+  color: #000;
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 4em;
+  margin: 0 2% 0 0;
+  width: 45%;
+}
+@media screen and (max-width: 1024px) {
+  .homepagePromo .promoText .bigText, .newsletterPromo .promoText .bigText {
+    font-size: 3.5em;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .homepagePromo .promoText .bigText, .newsletterPromo .promoText .bigText {
+    text-align: right;
+    width: 45%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .homepagePromo .promoText .bigText, .newsletterPromo .promoText .bigText {
+    float: none;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+}
+.homepagePromo .promoText .smallText, .newsletterPromo .promoText .smallText {
+  color: #000;
+  float: left;
+  font-size: 1.4em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  width: 45%;
+}
+@media screen and (max-width: 768px) {
+  .homepagePromo .promoText .smallText, .newsletterPromo .promoText .smallText {
+    padding: 0.7em 0;
+  }
+}
+@media screen and (max-width: 580px) {
+  .homepagePromo .promoText .smallText, .newsletterPromo .promoText .smallText {
+    float: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .homepagePromo .promoText, .newsletterPromo .promoText {
+    margin: 0 auto 10px;
+    width: 100%;
+  }
+}
+.homepagePromo #v65-subscribeWidget, .newsletterPromo #v65-subscribeWidget {
+  float: left;
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .homepagePromo #v65-subscribeWidget, .newsletterPromo #v65-subscribeWidget {
+    float: none;
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .homepagePromo #v65-subscribeWidget, .newsletterPromo #v65-subscribeWidget {
+    width: 100%;
+  }
+}
+.homepagePromo #v65-subscribeWidget form, .newsletterPromo #v65-subscribeWidget form {
+  margin: 0;
+}
+.homepagePromo #v65-subscribeWidget input, .newsletterPromo #v65-subscribeWidget input {
+  -webkit-border-radius: 0.385em;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
+  float: left;
+  height: 4em;
+  line-height: 4em;
+  margin: 2.5%;
+  width: 50%;
+}
+.homepagePromo #v65-subscribeWidget button, .newsletterPromo #v65-subscribeWidget button {
+  background: #333;
+  float: left;
+  margin: 2.5% 0;
+  width: 25%;
+}
+@media screen and (max-width: 768px) {
+  .homepagePromo #v65-subscribeWidget button, .newsletterPromo #v65-subscribeWidget button {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .homepagePromo #v65-subscribeWidget button, .newsletterPromo #v65-subscribeWidget button {
+    height: 4.1em;
+    width: 33%;
+  }
+}
+.homepagePromo #v65-subscribeWidget button span, .newsletterPromo #v65-subscribeWidget button span {
+  background: #333;
+  font-size: 1.2em;
+  height: 3.4em;
+  line-height: 3.4em;
+  padding: 0;
+}
+@media screen and (max-width: 580px) {
+  .homepagePromo #v65-subscribeWidget button span, .newsletterPromo #v65-subscribeWidget button span {
+    height: 2.5em;
+    line-height: 2.5em;
+  }
+}
+.homepagePromo #v65-subscribeWidget span.error, .newsletterPromo #v65-subscribeWidget span.error {
+  margin: 0 0 0 18px;
+}
+
+.newsletterPromo {
+  margin: 1em 0 0;
+}
+
+.homepageContentPods .v65-pod {
+  float: left;
+  width: 47.5%;
+}
+.homepageContentPods .v65-pod:first-child {
+  margin: 0 5% 0 0;
+}
+@media screen and (max-width: 768px) {
+  .homepageContentPods .v65-pod {
+    float: none;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .homepageContentPods .v65-pod:first-child {
+    margin: 0 auto;
+  }
+}
+.homepageContentPods .v65-pod .v65-podTitle {
+  border-bottom: 1px solid black;
+  color: #676767;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+  padding: 0 0 0.5em 0;
+}
+.homepageContentPods .v65-pod .v65-podDescription {
+  color: black;
+}
+.homepageContentPods .v65-pod .v65-podDescription h1, .homepageContentPods .v65-pod .v65-podDescription h2, .homepageContentPods .v65-pod .v65-podDescription h3, .homepageContentPods .v65-pod .v65-podDescription h4, .homepageContentPods .v65-pod .v65-podDescription h5, .homepageContentPods .v65-pod .v65-podDescription h6 {
+  color: #676767;
+  margin: 0;
+}
+
+/* ----- b. Page Styles ----- */
+.pageContent {
+  background: white;
+  padding: 0 0 1em;
+}
+
+.pageText {
+  float: right;
+  width: 75%;
+}
+@media screen and (max-width: 580px) {
+  .pageText {
+    float: none;
+    margin: 0 0 2em 0;
+    width: 100%;
+  }
+}
+
+.pageWideText {
+  margin: 0 auto;
+  width: 90%;
+}
+@media screen and (max-width: 835px) {
+  .pageWideText {
+    float: none;
+    margin: 0 0 2em 0;
+    width: 100%;
+  }
+}
+
+.colWrapper {
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.colWrapper:before, .colWrapper:after {
+  content: "";
+  display: table;
+}
+
+.colWrapper:after {
+  clear: both;
+}
+
+.col2 {
+  float: left;
+  margin-left: 6%;
+  width: 47%;
+}
+
+.col2:first-child {
+  float: left;
+  margin-left: 0%;
+  width: 47%;
+}
+
+.col3 {
+  float: left;
+  margin-left: 5%;
+  width: 30%;
+}
+
+.col3:first-child {
+  float: left;
+  margin-left: 0%;
+  width: 30%;
+}
+
+@media screen and (max-width: 580px) {
+  .col2 {
+    float: none;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+    width: 100%;
+  }
+
+  .col2:first-child {
+    float: none;
+    width: 100%;
+  }
+
+  .col3 {
+    float: none;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+    width: 100%;
+  }
+
+  .col3:first-child {
+    float: none;
+    width: 100%;
+  }
+}
+/*   ===================================================================================================
+     6. Blog Template
+======================================================================================================== */
+.blogContent {
+  float: left;
+  padding: 20px 4% 0 0;
+  width: 56%;
+}
+@media screen and (max-width: 600px) {
+  .blogContent {
+    padding: 20px 4% 0 0;
+    width: 66%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .blogContent {
+    float: none;
+    margin: 0 0 2em 0;
+    padding: 0;
+    width: 96%;
+  }
+}
+
+.blogFilter {
+  border-bottom: 1px solid #d4d4d4;
+  border-left: 1px solid #d4d4d4;
+  border-right: 1px solid #d4d4d4;
+}
+.blogFilter ul {
+  border: 0;
+  padding: 0 0 0 1.5em;
+}
+.blogFilter h5 {
+  color: #a3a3a3;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0 0 0 1em;
+}
+.blogFilter li a {
+  color: #56c1da;
+  line-height: 2em;
+}
+.blogFilter li a:hover {
+  background: none;
+  color: #80d0e3;
+}
+.blogFilter > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em 0 1em 1.5em;
+}
+.blogFilter > div > a strong {
+  font-weight: normal;
+  padding: 0.5em;
+}
+.blogFilter .v65-recentEntriesTitle {
+  font-weight: normal;
+  line-height: 0.5;
+}
+.blogFilter .v65-recentEntriesDate {
+  padding: 0 0 0 0.5em;
+}
+@media screen and (max-width: 580px) {
+  .blogFilter {
+    text-align: center;
+  }
+}
+
+/*
+.blogRightWrapper {
+	float: right;
+	padding: 20px 0 0 0;
+	width: 40%;
+
+	ul{
+		list-style: none;
+		margin: 0 0 1em;
+		padding: 0;
+	}
+
+	li{
+		font-size: 11px;
+		margin: 0 0 0 10px;
+	}
+
+	@media screen and (max-width : 600px) {
+		float: left;
+		margin: 0 0 2em 0;
+		padding: 0;
+		width: 30%;
+	}
+
+	@media screen and (max-width : 580px) {
+		float: none;
+		margin: 0 0 2em 0;
+		padding: 0;
+		width: 100%;
+	}
+
+}
+
+	.blogFilterLeft {
+		float: left;
+		padding-right: 4%;
+		width: 48%;
+
+		@media screen and (max-width : 600px) {
+			float: none;
+			margin: 0 0 2em 0;
+			width: 100%;
+		}
+
+		@media screen and (max-width : 580px) {
+			float: left;
+			padding-right: 4%;
+			width: 48%;
+		}
+
+	}
+
+	.blogFilterRight {
+		float: left;
+		width: 48%;
+
+		@media screen and (max-width : 600px) {
+			float: none;
+			margin: 0 0 2em 0;
+			width: 100%;
+		}
+
+		@media screen and (max-width : 580px) {
+			float: left;
+			width: 48%;
+		}
+	}
+*/
+/*   ===================================================================================================
+     7. Print Template
+======================================================================================================== */
+.printBody {
+  background-color: #fff;
+  background-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+.printWrapper {
+  margin: 0 auto;
+  width: 700px;
+}
+
+.printHeader {
+  height: 150px;
+  width: 700px;
+}
+
+.printContent {
+  text-align: left;
+  width: 700px;
+}
+
+.print {
+  padding: 0 2em;
+}
+
+/*   ===================================================================================================
+     8. Buttons
+======================================================================================================== */
+button.defaultBtn, button.modalBtn, button.largeBtn {
+  background: #56c1da;
+  border-radius: 0.385em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+button.defaultBtn span, button.modalBtn span, button.largeBtn span {
+  background: #56c1da;
+  color: white;
+  border-radius: 0.385em;
+  padding: 0 1em;
+}
+@media screen and (max-width: 580px) {
+  button.defaultBtn span, button.modalBtn span, button.largeBtn span {
+    padding: 0 0.3em;
+  }
+}
+button.defaultBtn:hover, button.modalBtn:hover, button.largeBtn:hover {
+  background: #80d0e3;
+}
+button.defaultBtn:hover span, button.modalBtn:hover span, button.largeBtn:hover span {
+  background: #80d0e3;
+}
+button.altBtn, button.altModalBtn, button.altLargeBtn {
+  background: #8d8d8d;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+button.altBtn span, button.altModalBtn span, button.altLargeBtn span {
+  background: #8d8d8d;
+  color: white;
+  border-radius: 0.385em;
+  padding: 0 1em;
+}
+button.altBtn:hover, button.altModalBtn:hover, button.altLargeBtn:hover {
+  background: #a7a7a7;
+}
+button.altBtn:hover span, button.altModalBtn:hover span, button.altLargeBtn:hover span {
+  background: #a7a7a7;
+}
+
+a.linkBtn, a.modalLinkBtn, a.largeLinkBtn, a.fullWidthBtn {
+  background: #56c1da;
+  border-radius: 0.385em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+a.linkBtn span, a.modalLinkBtn span, a.largeLinkBtn span, a.fullWidthBtn span {
+  background: #56c1da;
+  color: white;
+  border-radius: 0.385em;
+  padding: 0 1em;
+}
+a.linkBtn:hover, a.modalLinkBtn:hover, a.largeLinkBtn:hover, a.fullWidthBtn:hover {
+  background: #80d0e3;
+  text-decoration: none;
+}
+a.linkBtn:hover span, a.modalLinkBtn:hover span, a.largeLinkBtn:hover span, a.fullWidthBtn:hover span {
+  background: #80d0e3;
+}
+a.fullWidthBtn {
+  display: block;
+  font-size: 1.1em;
+  max-width: 100%;
+  text-align: center;
+  width: 100%;
+}
+a.linkAltBtn, a.modalLinkAltBtn, a.modalLinkAltBtn {
+  background: #8d8d8d;
+  border-radius: 0.385em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+a.linkAltBtn span, a.modalLinkAltBtn span, a.modalLinkAltBtn span {
+  background: #8d8d8d;
+  border-radius: 0.385em;
+  color: white;
+  padding: 0 1em;
+}
+a.linkAltBtn:hover, a.modalLinkAltBtn:hover, a.modalLinkAltBtn:hover {
+  background: #a7a7a7;
+}
+a.linkAltBtn:hover span, a.modalLinkAltBtn:hover span, a.modalLinkAltBtn:hover span {
+  background: #a7a7a7;
+}
+a.modalLinkBtn, a.modalLinkAltBtn, a.modalLinkAltBtn {
+  min-width: auto;
+}
+
+.v65-quickView-close a {
+  border-radius: 0.385em;
+  background: #a7a7a7;
+}
+.v65-quickView-close a:hover {
+  background: #a7a7a7;
+}
+
+/*   ===================================================================================================
+     9. Footer
+======================================================================================================== */
+footer {
+  width: 100%;
+}
+@media screen and (max-width: 580px) {
+  footer {
+    text-align: center;
+  }
+}
+footer .footerMain {
+  background: #1a1a1a;
+  color: white;
+  float: left;
+  padding: 2em 0;
+  width: 100%;
+}
+footer .footerMain h3 {
+  color: white;
+}
+footer .footerMain ul {
+  list-style: none;
+  padding: 0;
+}
+footer .footerMain ul a {
+  color: #CCCBCC;
+}
+footer .footerMain .footerLeft {
+  float: left;
+  width: 40%;
+}
+@media screen and (max-width: 768px) {
+  footer .footerMain .footerLeft {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 580px) {
+  footer .footerMain .footerLeft {
+    margin-bottom: 1em;
+    width: 95%;
+  }
+  footer .footerMain .footerLeft table tr td {
+    display: block;
+  }
+}
+footer .footerMain .footerMiddle {
+  float: left;
+  width: 20%;
+}
+@media screen and (max-width: 768px) {
+  footer .footerMain .footerMiddle {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 580px) {
+  footer .footerMain .footerMiddle {
+    width: 95%;
+  }
+  footer .footerMain .footerMiddle ul {
+    margin: 0 auto;
+    text-align: left;
+    width: 110px;
+  }
+}
+footer .footerMain .footerMiddle a {
+  line-height: 2.2em;
+}
+footer .footerMain .footerMiddle i {
+  color: #a9c535;
+  font-size: 2em;
+}
+footer .footerMain .footerRight {
+  float: left;
+  width: 40%;
+}
+footer .footerMain .footerRight ul {
+  margin: 3em 0 0 0;
+}
+@media screen and (max-width: 768px) {
+  footer .footerMain .footerRight {
+    width: 100%;
+  }
+  footer .footerMain .footerRight ul {
+    margin: 1em 0 0 0;
+  }
+  footer .footerMain .footerRight ul li {
+    display: inline;
+    margin: 0 0 0 10px;
+  }
+  footer .footerMain .footerRight ul li:first-child {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 580px) {
+  footer .footerMain .footerRight {
+    width: 95%;
+  }
+  footer .footerMain .footerRight ul {
+    margin: 1.5em 0 0 0;
+  }
+  footer .footerMain .footerRight ul li {
+    display: block;
+    line-height: 2;
+    margin: 0;
+  }
+  footer .footerMain .footerRight ul li a {
+    display: block;
+  }
+}
+footer .footerCopyright {
+  background: white;
+  float: left;
+  padding: 1em 0;
+  width: 100%;
+}
+footer .footerCopyright p {
+  color: #999999;
+  display: inline;
+  margin: 0;
+}
+footer .footerCopyright p a {
+  color: #999999;
+}
+footer .footerCopyright .copyright {
+  border-left: 1px solid #999999;
+  padding: 0 0 0 5px;
+  margin: 0 0 0 3px;
+}
+@media screen and (max-width: 580px) {
+  footer .footerCopyright {
+    padding: 2em 0;
+  }
+  footer .footerCopyright p {
+    display: block;
+  }
+  footer .footerCopyright .copyright {
+    border-left: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* ----- Checkout footer items ----- */
+.footerSocialCheckout {
+  border-bottom: 0 solid white;
+  margin: 0;
+}
+.footerSocialCheckout .copyright {
+  margin: 0;
+}
+
+.footerNavWrapperCheckout {
+  margin: 0;
+}
+.footerNavWrapperCheckout .v65-podDescription {
+  border-right: 0 solid white;
+}
+
+.accoladeCheckout {
+  text-align: center;
+}
+
+/*   ===================================================================================================
+     10. Vin65 Overrides
+======================================================================================================== */
+@media screen and (min-width: 725px) {
+  fieldset#v65-fieldset-choices {
+    display: block;
+    margin: 0 0 10px 0;
+    border: 1px solid #ccc;
+    width: 360px;
+  }
+}
+
+.alert {
+  color: #fff;
+  background: #c53939;
+}
+
+@media screen and (min-width: 581px) {
+  .customForms .v65-form {
+    width: 250px;
+    margin: 0 0 1em;
+    float: right;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: 581px) {
+  .aboutUs.equalize {
+    float: left;
+    width: 46%;
+    padding: 2%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .v65-productAddToCart-drilldownActivate .v65-product-actionMessage {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #v65-shippingWidget {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #v65-shippingWidgetTable {
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+
+#v65-fieldset-sourceCode {
+  display: none;
+}
+
+.pageWideText .clear {
+  display: none;
+}
+
+.v65-product-photo {
+  min-height: 125px;
+}
+
+@media screen and (max-width: 600px) {
+  .v65-addToCartCase {
+    display: none;
+  }
+}
+
+#v65-clubFormWrapper form {
+  width: 100%;
+}
+
+/* ----- a. User Tools ----- */
+#user-tools {
+  position: relative;
+}
+#user-tools a {
+  color: white;
+}
+#user-tools .v65-yourAccount, #user-tools .v65-editProfile {
+  border-right: 1px solid white;
+}
+@media screen and (max-width: 580px) {
+  #user-tools .v65-yourAccount, #user-tools .v65-editProfile {
+    border-right: 1px solid #666;
+    width: 30%;
+  }
+}
+#user-tools #v65-modalCart strong {
+  font-weight: normal;
+}
+@media screen and (max-width: 580px) {
+  #user-tools #v65-modalCart {
+    width: 100%;
+  }
+}
+#user-tools .v65-login, #user-tools .v65-logout {
+  width: 23%;
+}
+
+/* ----- b. Homepage Product Group ----- */
+.homepageProductGroup .v65-productGroup-products {
+  text-align: left;
+  width: 100%;
+}
+
+.homepageProductGroup .v65-productGroup-title {
+  color: #676767;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  line-height: 1.2;
+  margin: 0.25em 0 0.5em;
+}
+
+.homepageProductGroup .v65-productGroup-teaser {
+  float: none;
+  margin: 0;
+  width: 100%;
+}
+
+.homepageProductGroup .v65-productGroup-product {
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+.homepageProductGroup .v65-product-photo {
+  float: left;
+  width: auto;
+}
+
+.homepageProductGroup .v65-productGroup-product .v65-product-addToCart-priceWrapper {
+  display: inline;
+}
+
+/* ----- c. Product List Layouts ----- */
+.v65-product1UpStore {
+  border-bottom: 0;
+  margin: 0;
+}
+@media screen and (max-width: 580px) {
+  .v65-product1UpStore {
+    margin-bottom: 1em;
+  }
+}
+
+.v65-product2Up .v65-product-addToCart-priceWrapper {
+  margin-right: 9em;
+}
+
+.v65-professionalReviews {
+  display: none;
+}
+
+/* ----- d. Pagination Styles ----- */
+.v65-product-pagination a {
+  background: none !important;
+  color: #c7c5c6;
+}
+.v65-product-pagination strong {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  color: #000;
+  display: block;
+  font-weight: normal;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  width: 2em;
+}
+
+/* ----- e. Cart/Checkout ----- */
+#v65-cartCheckOutCoupons form {
+  width: 255px;
+}
+
+#v65-modalContent, #v65-signUpClubSummaryWrapper, #v65-cartTable th, #v65-cartTable td, #v65-checkoutCartSummaryWrapper {
+  background-color: white !important;
+}
+
+.print #v65-cartTable th, .print #v65-cartTable td {
+  background-color: initial !important;
+}
+.print h1, .print h4 {
+  color: #000;
+}
+
+/* ----- f. Product Drilldown Social Bar ----- */
+.v65-socialMediaBar-Email {
+  padding-right: 8px;
+}
+
+/*   ===================================================================================================
+     11. IE8 Fixes
+======================================================================================================== */
+a.nivo-control {
+  font-size: 0;
+}
+
+input[type="password"] {
+  font-family: Arial;
+}
+
+.v65-form input[type=text], .v65-form input[type=password], .v65-form input[type='username'] {
+  width: 215px;
+}
