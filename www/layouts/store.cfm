@@ -54,18 +54,6 @@
 
 	</header>
 
-	<section class="pageFeatureProducts">
-
-		<div class="wrapper v65-group">
-
-			<div class="featureProducts">
-				<cf_product_group code="FeaturedProductGroup">
-			</div>
-
-		</div>
-
-	</section>
-
 	<article class="pageContent">
 
 		<div class="wrapper v65-group">
